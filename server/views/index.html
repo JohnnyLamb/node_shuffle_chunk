@@ -6,9 +6,19 @@
 {% block content %}
 
   <div class="container">
+      <form class="form-inline"method="post" action="/">
+        <input class="form-control" name="people" type="string" placeholder="people"required>
+        <input class="form-control" name="number" type="number" placeholder="how many groups" required>
+        <button type="submit" class="btn btn-danger">GET GROUPS!</button>
+      </form>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+
+        <ol>
+        {%for result in results%}
+          <li>{{result}}</li>
+            {%endfor%}
+         </ol>
+
 
   </div>
 
